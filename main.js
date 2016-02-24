@@ -66,7 +66,7 @@ function init() {
   //   listContainer.page.removeChild(listContainer);
   //   listContainer.page.appendChild(listContainer);
   }
-}
+// }
 
 
 
