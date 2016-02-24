@@ -2,22 +2,44 @@
 
 
 document.addEventListener('DOMContentLoaded', init);
-  function init() {
+function init() {
 
 
-    document.getElementById('addName').onclick = function addName(){
-      console.log('click');w
-    }
+  var nameButton = document.getElementById('addName');
+  var inputValue = document.getElementById('names');
+  var list = document.getElementById('listContainer');
 
+  var nameArr = [];
 
+  nameButton.onclick = function addName(){
 
-// document.addEventListener('click', function(displayName){
+    var listItem = document.createElement('li');
+    var inputVal = inputValue.value;
+    var list = document.getElementById('list');
 
- // document.getElementById("names").value = 
+    var names = inputVal.split(',');
+    
+    names.forEach(function(name){
+      listItem.textContent = names;
+      list.appendChild(listItem);
+      nameArr.push(inputVal);
 
+      
 
-// });
+      console.log(nameArr);
+
+    });
+
+    
+
+  };
+
 }
+
+
+
+
+
 
 
 
