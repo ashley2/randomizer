@@ -7,33 +7,53 @@ function init() {
 
   var nameButton = document.getElementById('addName');
   var inputValue = document.getElementById('names');
-  var list = document.getElementById('listContainer');
+  var list = document.getElementById('list');
+
 
   var nameArr = [];
 
   nameButton.onclick = function addName(){
 
-    var listItem = document.createElement('li');
     var inputVal = inputValue.value;
-    var list = document.getElementById('list');
 
     var names = inputVal.split(',');
     
     names.forEach(function(name){
 
-      listItem.textContent = names;
+      var listItem = document.createElement('li');
+      listItem.textContent = name;
       list.appendChild(listItem);
-      
+
+      nameArr.push(name);
       console.log(name);
       console.log(nameArr);
 
-      nameArr.push(inputVal);
     });
-
-
 
   };
 
+  var randomButton = document.getElementById('randomize');
+
+  randomButton.onclick = function getRandom() {
+
+    console.log('click');
+
+
+    function shuffle(nameArr) {
+      var j, x, i;
+      for (i = nameArr.length; i; i -= 1) {
+        j = Math.floor(Math.random() * i);
+        x = nameArr[i - 1];
+        nameArr[i - 1] = nameArr[j];
+        nameArr[j] = x;
+      }
+      return nameArr;
+    }
+    shuffle(nameArr);
+    console.log(nameArr);
+    document.getElementById("namePicked").innerHTML = nameArr[0];
+
+  }
 }
 
 
