@@ -20,17 +20,17 @@ function init() {
     var names = inputVal.split(',');
     
     names.forEach(function(name){
+
       listItem.textContent = names;
       list.appendChild(listItem);
-      nameArr.push(inputVal);
-
       
-
+      console.log(name);
       console.log(nameArr);
 
+      nameArr.push(inputVal);
     });
 
-    
+
 
   };
 
