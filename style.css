@@ -1,0 +1,10 @@
+body {
+  font-family: 'Lato', sans-serif; }
+
+#appTitle {
+  font-size: 30px; }
+
+#listContainer {
+  border: 2px solid black;
+  height: 600px;
+  width: 600px; }
