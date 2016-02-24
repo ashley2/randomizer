@@ -1,16 +1,66 @@
+*{
+  text-align: center;
+}
 body {
   font-family: 'Lato', sans-serif;
 }
 
 
 #appTitle {
-  font-size: 30px;
+  font-size: 50px;
 }
 
+#directions {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 25px;
+  width: 800px;
+}
+
+#page {
+  height: 100vh;
+  width: 100vw;
+}
 
 #listContainer {
-  border: 2px solid black;
-  height: 600px;
-  width: 600px;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
 }
+
+#bottomDirection {
+  font-size: 20px;
+}
+#namePicked {
+  font-size: 100px;
+  color: #cc33ff;
+}
+#names {
+  margin-right: 15px;
+}
+
+.myButton {
+  font-size: 20px;
+  width: 120px;
+  height: 80px;
+  color: #6496c8;
+  background: rgba(0,0,0,0);
+  border: solid 5px #6496c8;
+  transition: border 1s ease, color 1s ease;
+}
+.myButton:hover,
+.myButton.hover {
+  border-color: #cc33ff;
+  color: #cc33ff;
+}
+.myButton:active,
+.myButton.active {
+  border-color: #27496d;
+  color: #27496d;
+}
+.myButton:focus {
+  outline: none;
+}
+
+
 

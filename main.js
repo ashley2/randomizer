@@ -25,10 +25,13 @@ function init() {
       list.appendChild(listItem);
 
       nameArr.push(name);
-      console.log(name);
-      console.log(nameArr);
 
+      //statement for if a name repeats
+      //statement for if list gets to 10 than make a new list next to it
     });
+    var resetInput = document.getElementById("names")
+    resetInput.value = '';
+
 
   };
 
@@ -50,9 +53,18 @@ function init() {
       return nameArr;
     }
     shuffle(nameArr);
-    console.log(nameArr);
+
     document.getElementById("namePicked").innerHTML = nameArr[0];
 
+  }
+
+  // clearButton.onclick = function clearPage () {
+  //   var listContainer = document.getElementById('listContainer');
+  //   var page = document.getElementById('inputContiner');
+
+
+  //   listContainer.page.removeChild(listContainer);
+  //   listContainer.page.appendChild(listContainer);
   }
 }
 
